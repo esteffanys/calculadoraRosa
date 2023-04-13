@@ -1,0 +1,7 @@
+{
+  "name": "calculadoraRosa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
