@@ -9,5 +9,10 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule],
 })
 export class AppComponent {
-  constructor() {}
+ expresao:string;
+ resultado: number;
+  constructor() {
+    this.expresao = '';
+    this.resultado = 0;
+  }
 }
