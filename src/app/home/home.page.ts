@@ -9,14 +9,30 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule],
 })
 export class HomePage {
-expresao:string;
-resultado: number;
-  constructor() {
-     this.expresao = '';
-     this.resultado = 0;
-   }
-    limpar(){}
-    calcular(){}
 
 
-}
+    valorInicial: any;
+    constructor() {
+      this.valorInicial = '';
+    }
+
+    inserir(valor: any):void{
+      this.valorInicial += valor;
+    }
+
+    apagarTudo(): void{
+      this.valorInicial = '';
+    }
+
+    apagarum():void{
+      let novalista = this.valorInicial.split('');
+      novalista.pop();
+      this.valorInicial = novalista.join('');
+    }
+
+    calcular(): void{
+      this.valorInicial = eval(this.valorInicial);
+    }
+
+
+  }
